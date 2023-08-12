@@ -10,15 +10,17 @@ export default function Navbar() {
 	};
 	return (
 		<>
-			<main className='p-4 space-x-2  bg-yellow-400 flex flex-row items-end justify-end'>
+			<main className='p-4 space-x-2 bg-pink-500 flex flex-row items-end justify-end'>
 				<Link to='/'>Home</Link>
-				<Link to='/login'>Sign In</Link>
+				{!user?	<Link to='/login'>Sign In</Link>:<Link to='/createpost'>Create Post</Link>}
+			
+
 
 				{user && (
 					<>
 						<div>
 							<img
-								className='rounded-full '
+								className='rounded-full object-none hover:object-scale-down '
 								src={user?.photoURL || ''}
 								width='100'
 								height='100'
