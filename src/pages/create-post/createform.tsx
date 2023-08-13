@@ -5,7 +5,7 @@ import { addDoc, collection } from "firebase/firestore";
 import { db } from "../../config/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../../config/firebase";
-import { useNavigate, userNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 interface CreateFormData {
   title: string;
   description: string;
